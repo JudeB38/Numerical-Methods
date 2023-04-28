@@ -50,4 +50,3 @@ class parent:
                 outPol = outPol.derivative()
                 i -= 1
             return outPol
-    
