@@ -36,17 +36,14 @@ class parent:
         
         def derivative(self):
             dcoeff = []
-            print(self.coeff)
             for i in range(self.order, 0, -1):
                 dcoeff.append(self.coeff[self.order - i] * i)
-            print(dcoeff)
             return parent.polynomial(self.order-1, dcoeff)
         
         def nDerivative(self, n):
             i = n
             outPol = self
             while i > 0:
-                print(i)
                 outPol = outPol.derivative()
                 i -= 1
             return outPol
